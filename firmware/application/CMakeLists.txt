@@ -279,6 +279,7 @@ set(CPPSRC
 	apps/ui_level.cpp  
 	apps/tpms_app.cpp
 	apps/tpms_app.cpp
+	apps/ui_newapp.cpp #My Test App
 	protocols/aprs.cpp
 	protocols/ax25.cpp
 	protocols/bht.cpp

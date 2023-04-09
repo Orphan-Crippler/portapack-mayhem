@@ -24,6 +24,7 @@
 
 //#include "modules.h"
 
+#include "ui_newapp.hpp"
 #include "portapack.hpp"
 #include "event_m0.hpp"
 #include "bmp_splash.hpp"
@@ -575,6 +576,7 @@ TransmittersMenuView::TransmittersMenuView(NavigationView& nav) {
 		add_items( { { "..", ui::Color::light_grey(),&bitmap_icon_previous , [&nav](){ nav.pop(); } } } );
 	}
 	add_items({
+		{ "New App",		ui::Color::red(),		&bitmap_icon_remote,	[&nav](){ nav.push<NewAppView>(); } },		
 		{ "ADS-B [S]",		ui::Color::yellow(),	&bitmap_icon_adsb,		[&nav](){ nav.push<ADSBTxView>(); } },
 		{ "APRS",			ui::Color::green(),		&bitmap_icon_aprs,		[&nav](){ nav.push<APRSTXView>(); } },
 		{ "BHT Xy/EP",		ui::Color::green(),		&bitmap_icon_bht,		[&nav](){ nav.push<BHTView>(); } },
